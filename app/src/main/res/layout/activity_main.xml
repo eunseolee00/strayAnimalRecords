@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/five"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
         android:layout_width="328dp"
         android:layout_height="93dp"
-        android:backgroundTint="#ADAABF"
+        android:backgroundTint="#8B879F"
         android:fontFamily="sans-serif-smallcaps"
         android:text="New Animal"
         android:textSize="34sp"
@@ -24,7 +24,7 @@
         android:id="@+id/button2"
         android:layout_width="328dp"
         android:layout_height="93dp"
-        android:backgroundTint="#ADAABF"
+        android:backgroundTint="#8B879F"
         android:fontFamily="sans-serif-smallcaps"
         android:text="View Existing"
         android:textSize="34sp"
