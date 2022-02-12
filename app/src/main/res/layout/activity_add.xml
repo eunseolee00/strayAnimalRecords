@@ -6,4 +6,202 @@
     android:layout_height="match_parent"
     tools:context=".activity_add">
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Health Status:"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
+        tools:layout_editor_absoluteX="54dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="108dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Spayed/Neutered?:"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="301dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Sex:"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="302dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round"
+        android:backgroundTint="#EAF7CF"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Enter Volunteer Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="302dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round"
+        android:backgroundTint="#EAF7CF"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Enter Location"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="302dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/round"
+        android:backgroundTint="#EAF7CF"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="Enter Animal Name"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Animal:"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="29dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="315dp"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <RadioButton
+            android:id="@+id/radioButton12"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Cat"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Dog"
+            android:textSize="24sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RadioButton
+            android:id="@+id/radioButton14"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Female"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Male"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <RadioButton
+            android:id="@+id/radioButton16"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Yes"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A5B389"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="No"
+            android:textSize="24sp"
+            android:textAlignment="viewStart" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
