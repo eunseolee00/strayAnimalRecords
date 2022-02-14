@@ -56,6 +56,7 @@
         android:id="@+id/textView3"
         android:layout_width="302dp"
         android:layout_height="47dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/round"
         android:backgroundTint="#EAF7CF"
         android:fontFamily="sans-serif-smallcaps"
@@ -66,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="605dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView2"
@@ -212,14 +213,17 @@
         android:id="@+id/button3"
         android:layout_width="142dp"
         android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#EBEFBF"
         android:fontFamily="sans-serif-smallcaps"
         android:text="SAVE"
         android:textColor="#000000"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

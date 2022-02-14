@@ -4,8 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/round.xml" value="0.26614583333333336" />
-        <entry key="app/src/main/res/layout/activity_add.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_editor.xml" value="0.17980072463768115" />
+        <entry key="app/src/main/res/layout/activity_add.xml" value="0.2894736842105263" />
+        <entry key="app/src/main/res/layout/activity_editor.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_list.xml" value="0.17980072463768115" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>

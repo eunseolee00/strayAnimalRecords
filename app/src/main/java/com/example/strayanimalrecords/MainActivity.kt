@@ -16,8 +16,6 @@ var animalType = ArrayList<String>()
 var healthStatus = ArrayList<Int>()
 lateinit var sharedPreferences: SharedPreferences
 
-
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
