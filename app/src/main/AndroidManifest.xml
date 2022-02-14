@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StrayAnimalRecords">
         <activity
-            android:name=".EditorActvity"
+            android:name=".EditorActivity"
             android:exported="false" />
         <activity
             android:name=".Editor"
             android:exported="false" />
         <activity
-            android:name=".activity_list"
+            android:name=".ListActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_add"
+            android:name=".AddActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

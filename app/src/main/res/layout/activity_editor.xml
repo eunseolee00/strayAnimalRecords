@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/three"
-    tools:context=".EditorActvity">
+    tools:context=".EditorActivity">
 
     <TextView
         android:id="@+id/textView7"
@@ -50,17 +50,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/location" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <EditText
+        android:id="@+id/volunteerName"
         android:layout_width="302dp"
         android:layout_height="47dp"
         android:layout_marginTop="76dp"
         android:background="@drawable/round"
         android:backgroundTint="#EAF7CF"
+        android:ems="15"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="Enter Volunteer Name"
+        android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -69,32 +71,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/location"
         android:layout_width="302dp"
         android:layout_height="47dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/round"
         android:backgroundTint="#EAF7CF"
+        android:ems="20"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="Enter Location"
+        android:inputType="textPostalAddress"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/animalName" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/animalName"
         android:layout_width="303dp"
         android:layout_height="47dp"
         android:layout_marginTop="25dp"
         android:background="@drawable/round"
         android:backgroundTint="#EAF7CF"
+        android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
         android:hint="Enter Animal Name"
+        android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -224,6 +230,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/volunteerName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
