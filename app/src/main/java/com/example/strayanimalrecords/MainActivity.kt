@@ -1,4 +1,4 @@
-//https://www.android--code.com/2018/02/android-kotlin-radiogroup-and.html
+//Author: Eunseo Elsa Lee, Karen Ren
 package com.example.strayanimalrecords
 
 import android.content.Context

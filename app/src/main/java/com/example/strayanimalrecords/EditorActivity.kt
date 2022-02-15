@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 
 class EditorActivity : AppCompatActivity() {
@@ -28,6 +29,7 @@ class EditorActivity : AppCompatActivity() {
 
     lateinit var save : Button
 
+    var flag = true
     var loc = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -125,4 +127,17 @@ class EditorActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }//saveData
-}
+
+    fun hide (view : View) {
+
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        if (flag) {
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+        }
+        else {
+            imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0)
+        }
+        flag = !flag
+    }//hide
+
+}//AppCompatActivity

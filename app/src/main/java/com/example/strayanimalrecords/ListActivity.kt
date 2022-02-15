@@ -70,7 +70,7 @@ class ListActivity : AppCompatActivity() {
                         sharedPreferences.edit().putString(
                             "animalTypes", ObjectSerializer.serialize(AllAnimalTypes))
                             .apply()
-                    }
+                    }//setPositiveButton
                     .setNegativeButton("No", null)
                     .show()
 
