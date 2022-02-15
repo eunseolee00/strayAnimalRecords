@@ -84,7 +84,7 @@ class EditorActivity : AppCompatActivity() {
 
     fun saveData(view: View){
 
-        AllAnimalTypes[loc] = animalName.text.toString()
+        AllAnimalNames[loc] = animalName.text.toString()
         AllLocations[loc] = location.text.toString()
         AllVolunteerNames[loc] = volunteerName.text.toString()
         AllHealthStatuses[loc] = health.rating.toString()
