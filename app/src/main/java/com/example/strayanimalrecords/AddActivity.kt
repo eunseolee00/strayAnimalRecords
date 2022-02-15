@@ -99,7 +99,6 @@ class AddActivity : AppCompatActivity() {
         sharedPreferences.edit().putString("volunteers", ObjectSerializer.serialize(
             AllVolunteerNames)).apply()
 
-
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }//saveData
