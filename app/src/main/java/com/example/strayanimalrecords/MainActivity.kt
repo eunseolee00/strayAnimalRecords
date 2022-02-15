@@ -11,6 +11,15 @@ import android.view.View
 import android.widget.ArrayAdapter
 import java.util.ArrayList
 
+
+lateinit var arrayAdapter: ArrayAdapter<*>
+var AllAnimalNames = ArrayList<String>()
+var AllLocations = ArrayList<String>()
+var AllVolunteerNames = ArrayList<String>()
+var AllSexes = ArrayList<String>()
+var AllNeuteredResults = ArrayList<String>()
+var AllAnimalTypes = ArrayList<String>()
+var AllHealthStatuses = ArrayList<String>()
 lateinit var sharedPreferences: SharedPreferences
 
 class MainActivity : AppCompatActivity() {

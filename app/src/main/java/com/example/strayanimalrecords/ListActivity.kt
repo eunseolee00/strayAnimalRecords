@@ -12,14 +12,6 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import java.util.ArrayList
 
-lateinit var arrayAdapter: ArrayAdapter<*>
-var AllAnimalNames = ArrayList<String>()
-var AllLocations = ArrayList<String>()
-var AllVolunteerNames = ArrayList<String>()
-var AllSexes = ArrayList<String>()
-var AllNeuteredResults = ArrayList<String>()
-var AllAnimalTypes = ArrayList<String>()
-var AllHealthStatuses = ArrayList<String>()
 
 
 class ListActivity : AppCompatActivity() {
@@ -106,7 +98,7 @@ class ListActivity : AppCompatActivity() {
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("locations", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("location", ObjectSerializer.serialize(ArrayList<String>()))
             ) as ArrayList<String?>
 
         if (newAnimals.size != 0) {
@@ -117,7 +109,7 @@ class ListActivity : AppCompatActivity() {
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("volunteerNames", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("volunteers", ObjectSerializer.serialize(ArrayList<String>()))
             ) as ArrayList<String?>
 
         if (newAnimals.size != 0) {
@@ -128,7 +120,7 @@ class ListActivity : AppCompatActivity() {
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("neuterOrSpay", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("neuteredResult", ObjectSerializer.serialize(ArrayList<String>()))
             ) as ArrayList<String?>
 
         if (newAnimals.size != 0) {
@@ -139,23 +131,30 @@ class ListActivity : AppCompatActivity() {
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("sexes", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("Gender", ObjectSerializer.serialize(ArrayList<String>()))
             ) as ArrayList<String?>
 
         if (newAnimals.size != 0) {
             AllSexes = ArrayList(newAnimals)
         }//if
 
+
+
         newAnimals = ArrayList<String?>()
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("healthStatuses", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("Health", ObjectSerializer.serialize(ArrayList<String>()))
             ) as ArrayList<String?>
+
+
 
         if (newAnimals.size != 0) {
             AllHealthStatuses = ArrayList(newAnimals)
         }//if
+
+
+
 
         newAnimals = ArrayList<String?>()
         newAnimals = ObjectSerializer
