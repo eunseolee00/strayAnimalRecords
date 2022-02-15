@@ -1,5 +1,7 @@
+//https://www.android--code.com/2018/02/android-kotlin-radiogroup-and.html
 package com.example.strayanimalrecords
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.media.MediaPlayer
@@ -9,14 +11,17 @@ import android.view.View
 import android.widget.ArrayAdapter
 import java.util.ArrayList
 
+lateinit var sharedPreferences: SharedPreferences
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
     }//onCreate
 
     fun newAnimal(view: View?) {
-        val intent = Intent(this, EditorActivity::class.java)
+        val intent = Intent(this, AddActivity::class.java)
         startActivity(intent)
     }//newAnimal
 

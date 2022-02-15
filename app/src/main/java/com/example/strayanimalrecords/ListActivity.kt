@@ -20,7 +20,7 @@ var AllSexes = ArrayList<String>()
 var AllNeuteredResults = ArrayList<String>()
 var AllAnimalTypes = ArrayList<String>()
 var AllHealthStatuses = ArrayList<String>()
-lateinit var sharedPreferences: SharedPreferences
+
 
 class ListActivity : AppCompatActivity() {
     lateinit var listView: ListView
@@ -81,6 +81,7 @@ class ListActivity : AppCompatActivity() {
                     }
                     .setNegativeButton("No", null)
                     .show()
+
                 return@OnItemLongClickListener true
             }//OnItemCLongClickListener
     }//onCreate
@@ -160,7 +161,7 @@ class ListActivity : AppCompatActivity() {
         newAnimals = ObjectSerializer
             .deserialize(
                 sharedPreferences
-                    .getString("animalTypes", ObjectSerializer.serialize(ArrayList<String>()))
+                    .getString("Type", ObjectSerializer.serialize(ArrayList<Int>()))
             ) as ArrayList<String?>
 
         if (newAnimals.size != 0) {
