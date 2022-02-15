@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.health.HealthStats
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 
 class AddActivity : AppCompatActivity() {
@@ -29,6 +30,7 @@ class AddActivity : AppCompatActivity() {
     lateinit var healthStats: RatingBar
 
     lateinit var save : Button
+    var flag = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,6 +105,18 @@ class AddActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }//saveData
+
+    fun hide (view : View) {
+
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        if (flag) {
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+        }
+        else {
+            imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0)
+        }
+        flag = !flag
+    }//hide
 
 
 }//AddActivity

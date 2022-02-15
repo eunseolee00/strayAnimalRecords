@@ -1,7 +1,11 @@
 package com.example.strayanimalrecords
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 
 class EditorActivity : AppCompatActivity() {
@@ -26,6 +30,7 @@ class EditorActivity : AppCompatActivity() {
     lateinit var save : Button
 
     var loc = -1
+    var flag = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,5 +82,41 @@ class EditorActivity : AppCompatActivity() {
         }
 
 
-    }
+    }//onCreate
+
+    fun saveData(view: View){
+
+        AllAnimalNames.add(animalName.text.toString())
+        AllLocations.add(location.text.toString())
+        AllVolunteerNames.add(volunteerName.text.toString())
+        AllHealthStatuses.add(health.rating.toString())
+        arrayAdapter.notifyDataSetChanged()
+
+
+        sharedPreferences = applicationContext.getSharedPreferences("com.example.strayAnimalRecords", Context.MODE_PRIVATE)
+        sharedPreferences.edit().putString("animalNames", ObjectSerializer.serialize(AllAnimalNames)).apply()
+        sharedPreferences.edit().putString("Gender",ObjectSerializer.serialize(AllSexes)).apply()
+        sharedPreferences.edit().putString("location", ObjectSerializer.serialize(AllLocations)).apply()
+        sharedPreferences.edit().putString("Type",ObjectSerializer.serialize(AllAnimalTypes)).apply()
+        sharedPreferences.edit().putString("neuteredResult",ObjectSerializer.serialize(AllNeuteredResults)).apply()
+        sharedPreferences.edit().putString("Health",ObjectSerializer.serialize(AllHealthStatuses)).apply()
+        sharedPreferences.edit().putString("volunteers", ObjectSerializer.serialize(
+            AllVolunteerNames)).apply()
+
+        val intent = Intent(this, ListActivity::class.java)
+        startActivity(intent)
+    }//saveData
+
+
+    fun hide (view : View) {
+
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        if (flag) {
+            imm.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0)
+        }
+        else {
+            imm.toggleSoftInput(InputMethodManager.SHOW_IMPLICIT, 0)
+        }
+        flag = !flag
+    }//hide
 }
