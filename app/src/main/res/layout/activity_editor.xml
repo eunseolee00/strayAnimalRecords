@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:onClick="hide"
     android:background="@drawable/three"
+    android:onClick="hide"
     tools:context=".EditorActivity">
 
     <TextView
